@@ -1,0 +1,28 @@
+server:
+  port: 8080
+  error:
+    include-message: ALWAYS
+spring:
+  application:
+    name: order
+  datasource:
+    password: "rootpassword"
+    username: "root"
+    url: jdbc:mariadb://localhost:3306/orders?createDatabaseIfNotExist=true
+    platform: mariadb
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDBDialect
+  cloud:
+    openfeign:
+      okhttp:
+        enabled: true
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer

@@ -1,0 +1,17 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: product-catalog
+  datasource:
+    password: "rootpassword"
+    username: "root"
+    url: jdbc:mariadb://localhost:3306/catalog?createDatabaseIfNotExist=true
+    platform: mariadb
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDBDialect

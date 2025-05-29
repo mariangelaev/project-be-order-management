@@ -1,0 +1,25 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: order-search
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: ORDERCREATIONUPDATE_ENGINE_GROUP_ID
+      #key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      #value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      #properties:
+      #  spring:
+      #    json:
+      #      trusted:
+      #        packages: "*"
+      #      type:
+      #        mapping: "order:com.microservices.search.model.OrderResource"
+    elasticsearch:
+      repositories:
+        enabled: true
+  data:
+    redis:
+      host: localhost
+      port: 6379

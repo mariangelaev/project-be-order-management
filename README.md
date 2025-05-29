@@ -61,8 +61,11 @@ The project contains the following modules/microservices:
    (55, 'Casual T-Shirt', 'Comfortable cotton t-shirt in various colors', 'FASHION'),
    (10, 'Video Game Console', 'Latest generation gaming console', 'GAMES'),
    (200, 'Cooking Essentials', 'Set of essential cooking tools and utensils', 'ELECTRONICS');
+4. Create the topic
+   ```
+   usr/bin/kafka-topics --create --topic ORDERCREATIONUPDATE_TOPIC --bootstrap-server kafka:9092
 
-4. Run the 3 microservices
+5. Run the 3 microservices
    ```
    spring-boot:run
 

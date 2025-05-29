@@ -72,3 +72,7 @@ The project contains the following modules/microservices:
 3. Add cache when order-search asks for product description to product-catalog
 4. Use JsonDelerializer instead of object mapper when deserializing the event in product-catalog
 5. Add common interfaces (that don't change frequently, like BaseCommand) in a library
+
+
+## Issues to solve
+1. Sometimes no partition is assigned to the group id ORDERCREATIONUPDATE_ENGINE_GROUP_ID in order-search

@@ -72,6 +72,7 @@ The project contains the following modules/microservices:
 3. Add cache when order-search asks for product description to product-catalog
 4. Use JsonDelerializer instead of object mapper when deserializing the event in product-catalog
 5. Add common interfaces (that don't change frequently, like BaseCommand) in a library
+6. Use TestContainer to test Controllers in order and order-search modules (used only in product-catalog at the moment)
 
 
 ## Issues to solve

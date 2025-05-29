@@ -17,7 +17,7 @@ public class ProductCatalogService {
 
     private final ProductCatalogClient productCatalogClient;
 
-    //@Cacheable(value = "products") fixme: should be cached
+    //@Cacheable(value = "products") ///fixme: should be cached
     public Optional<Product> getProduct(Long productId) {
         ResponseEntity<Product> product = productCatalogClient.getProduct(productId.toString());
         log.info("ProductId {} - Response body {}", productId, product);
